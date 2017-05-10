@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
+
+  "icons": {
+    "48": "icons/48.png"
+  },
+
+
+  "applications": {
+    "gecko": {
+      "id": "TestTest@sdo.vsu.by.org",
+      "strict_min_version": "45.0"
+    }
+  },
+
+
+  "background": {
+    "scripts": ["scripts/background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.sdo.vsu.by/*"],
+      "js": ["scripts/jquery-3.2.1.min.js", "scripts/base.js","scripts/borderify.js"]
+    }
+  ]
+  //,
+  //"browser_action": {
+	//"default_popup": "popup.html",
+  //"default_icon": "icons/48.png"
+  //}
+}
