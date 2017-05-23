@@ -1,18 +1,26 @@
-//document.body.style.border = "5px solid red";
+
 
 {
 
-$('div.ablock').click(function() {
+$('div.info').click(function() {
+
 //получаем вопрос
-	var content = $(this).siblings('.qtext');
-	var quest = content.text();
-    //alert(quest);
+	var qtext = $(this).siblings('.content').children('.formulation').children('.qtext');
+    var ablock = qtext.siblings(".ablock");
+    console.log(qtext.html());
+    var quest = qtext.text();
+    console.log(quest);
+    
+   
+    
 //ищем ответ
-    var answerText = bd[quest]
-    var answer = $(this).children('.answer').children("div:contains(" + answerText + " )");
+var answerText = db[quest];
+console.log(answerText);
+var answer = ablock.children('.answer').children("div:contains(" + answerText + " )");
     //alert(answer.html());
+
 //ставим чекбокс
-    $(answer).children("input").prop("checked", true);
+$(answer).children("input").prop("checked", true);
 
 
 })

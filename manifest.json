@@ -26,9 +26,9 @@
       "js": ["scripts/jquery-3.2.1.min.js", "scripts/base.js","scripts/borderify.js"]
     }
   ]
-  //,
-  //"browser_action": {
-	//"default_popup": "popup.html",
-  //"default_icon": "icons/48.png"
-  //}
+  ,
+  "browser_action": {
+	"default_popup": "popup.html",
+  "default_icon": "icons/48.png"
+  }
 }
